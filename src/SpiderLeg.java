@@ -1,11 +1,15 @@
-import java.sql.Connection;
+import org.jsoup.*;
+import org.jsoup.nodes.Document;
+
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
 
 import javax.lang.model.util.Elements;
-import javax.swing.text.Document;
 import javax.swing.text.Element;
+
+import static jdk.internal.net.http.HttpRequestImpl.USER_AGENT;
 
 public class SpiderLeg {
 
@@ -36,7 +40,14 @@ public class SpiderLeg {
             System.out.println("Error in out HTTP request " + ioe);
         }
     }
-    public boolean searchForWord(String word) // Tries to find a word on the page
+
+    // Tries to find a word on the page
+    public boolean searchForWord(String searchWord)
+    {
+        System.out.println("Searching for the word " + searchWord + "...");
+        String bodyText = this.htmlDocument.body().text();
+        return bodyText.toLowerCase().contains(searchWord.toLowerCase());
+    }
     public List<String> getLinks() // Returns a list of all the URLs on the page
 
 
