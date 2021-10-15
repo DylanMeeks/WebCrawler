@@ -2,7 +2,7 @@
 public class Main {
 
     /**
-            * This is our test. It creates a spider (which creates spider legs) and crawls the web.
+            * This is Main. It's where the GUI is called and creates a spiderand crawls the web.
             *
             * @param args
      *            - not used

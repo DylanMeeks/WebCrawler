@@ -15,11 +15,13 @@ public class GUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500,500);
         frame.setTitle("Totally Legit Webcrawler");
+        frame.setLayout(null);
 
         label.setText("Website to crawl: ");
-        label.setSize(30,10);
+        label.setSize(100,10);
+
         textField = new JTextField();
-        textField.setSize(30,10);
+        textField.setSize(100,10);
 
         frame.add(label);
         frame.add(textField);
