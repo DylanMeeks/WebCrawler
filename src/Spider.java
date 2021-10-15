@@ -9,7 +9,6 @@ public class Spider {
     private Set<String> pagesVisited = new HashSet<String>();
     private List<String> pagesToVisit = new LinkedList<String>();
 
-
     /**
      * Our main launching point for the Spider's functionality. Internally it creates spider legs
      * that make an HTTP request and parse the response.
@@ -19,10 +18,11 @@ public class Spider {
      * param- searchWord
      *            - The word or string that you are searching for
      */
+    public Spider(){
 
+    }
 
-    public void search(String url, String searchWord)
-    {
+    public void search(String url, String searchWord) {
         while(this.pagesVisited.size() < MAX_PAGES_TO_SEARCH)
         {
             String currentUrl;
@@ -66,5 +66,6 @@ public class Spider {
         this.pagesVisited.add(nextUrl);
         return nextUrl;
     }
+
 
 }
