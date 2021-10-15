@@ -23,8 +23,7 @@ public class Spider {
     }
 
     public void search(String url, String searchWord) {
-        while(this.pagesVisited.size() < MAX_PAGES_TO_SEARCH)
-        {
+        while(this.pagesVisited.size() < MAX_PAGES_TO_SEARCH) {
             String currentUrl;
             SpiderLeg leg = new SpiderLeg();
             if(this.pagesToVisit.isEmpty())

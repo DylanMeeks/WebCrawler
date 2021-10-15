@@ -59,7 +59,6 @@ public class SpiderLeg
         }
     }
 
-
     /**
      * Performs a search on the body of on the HTML document that is retrieved. This method should
      * only be called after a successful crawl.
@@ -80,7 +79,6 @@ public class SpiderLeg
         String bodyText = this.htmlDocument.body().text();
         return bodyText.toLowerCase().contains(searchWord.toLowerCase());
     }
-
 
     public List<String> getLinks()
     {

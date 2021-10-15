@@ -9,8 +9,12 @@ public class Main {
      */
     public static void main(String[] args)
     {
-        Spider spider = new Spider();
-        spider.search("http://arstechnica.com/", "computer");
+        String web = "";
+        String searchWord = "";
+
+        GUI gui = new GUI();
+//        Spider spider = new Spider();
+//        spider.search(web, searchWord);
     }
 
 }
