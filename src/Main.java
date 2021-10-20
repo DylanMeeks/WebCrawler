@@ -1,20 +1,27 @@
+import java.util.Scanner;
 
 public class Main {
 
     /**
-            * This is Main. It's where the GUI is called and creates a spiderand crawls the web.
+            * This is Main. It's where the GUI is called and creates a spider and crawls the web.
             *
             * @param args
      *            - not used
      */
-    public static void main(String[] args)
-    {
-        String web = "";
-        String searchWord = "";
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        /* Console Version, not used in GUI version*/
+//        System.out.println("Website: ");
+//        web = s.nextLine();
+//        System.out.println("Word: ");
+//        searchWord = s.nextLine();
+
 
         GUI gui = new GUI();
 //        Spider spider = new Spider();
-//        spider.search(web, searchWord);
+//        spider.search(gui.webUrl, gui.word);
     }
 
 }
