@@ -20,8 +20,17 @@ public class Main {
 
 
         GUI gui = new GUI();
-//        Spider spider = new Spider();
-//        spider.search(gui.webUrl, gui.word);
+        try{
+            while(gui.webUrl == null || gui.word == null) {
+            }
+            System.out.println(gui.webUrl);
+//            Spider spider = new Spider();
+//            spider.search(gui.webUrl, gui.word);
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+
     }
 
 }

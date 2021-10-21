@@ -31,7 +31,6 @@ public class GUI {
         button1 = new JButton("Enter");
         button1.setBounds(652,0,100,30);
         button1.addActionListener(new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent e) {
                 webUrl = textField1.getText();
             }
