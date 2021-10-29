@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Main{
 
     /**
             * This is Main. It's where the GUI is called and creates a spider and crawls the web.
@@ -8,11 +8,11 @@ public class Main {
             * @param args
      *            - not used
      */
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
         Scanner s = new Scanner(System.in);
 
-        /* Console Version, not used in GUI version*/
+//        Console Version, not used in GUI version
 //        System.out.println("Website: ");
 //        web = s.nextLine();
 //        System.out.println("Word: ");
@@ -22,15 +22,14 @@ public class Main {
         GUI gui = new GUI();
         try{
             while(gui.webUrl == null || gui.word == null) {
+
             }
             System.out.println(gui.webUrl);
 //            Spider spider = new Spider();
 //            spider.search(gui.webUrl, gui.word);
         }
-        catch (Exception e){
-            System.out.println(e);
+        catch (Exception ignored){
         }
 
     }
-
 }
