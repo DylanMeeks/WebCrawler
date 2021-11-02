@@ -7,7 +7,7 @@ public class GUI {
     private JFrame frame;
     private JLabel label, label2;
     private JTextField textField1, textField2;
-    private JButton button1, button2;
+    private JButton button;
     public String webUrl;
     public String word;
 
@@ -27,15 +27,6 @@ public class GUI {
         textField1 = new JTextField();
         textField1.setBounds(152,0,500,30);
 
-        //instantiates and position button1
-        button1 = new JButton("Enter");
-        button1.setBounds(652,0,100,30);
-        button1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                webUrl = textField1.getText();
-            }
-        });
-
         //instantiates and position label2
         label2 = new JLabel();
         label2.setText("What am I looking for: ");
@@ -45,19 +36,20 @@ public class GUI {
         textField2 = new JTextField();
         textField2.setBounds(152,30,500,30);
 
-        //instantiates and position button2
-        button2 = new JButton("Enter");
-        button2.setBounds(652,30,100,30);
-        button2.addActionListener(new ActionListener() {
+        //instantiates and position button
+        button = new JButton("Enter");
+        button.setBounds((652/2) + 15 ,60,100,30);
+        button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                webUrl = textField1.getText();
                 word = textField2.getText();
             }
         });
 
         frame.add(label); frame.add(label2);
         frame.add(textField1); frame.add(textField2);
-        frame.add(button1); frame.add(button2);
+        frame.add(button);
 
 
         frame.setSize(750,200);

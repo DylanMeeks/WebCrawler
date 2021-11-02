@@ -22,11 +22,12 @@ public class Main{
         GUI gui = new GUI();
         try{
             while(gui.webUrl == null || gui.word == null) {
-
+                Thread.sleep(1000);
             }
             System.out.println(gui.webUrl);
-//            Spider spider = new Spider();
-//            spider.search(gui.webUrl, gui.word);
+            System.out.println(gui.word);
+            Spider spider = new Spider();
+            spider.search(gui.webUrl, gui.word);
         }
         catch (Exception ignored){
         }
