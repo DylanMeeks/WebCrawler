@@ -10,12 +10,14 @@ public class GUI {
     private JButton button;
     public String webUrl;
     public String word;
+    public static JTextArea result;
 
     public GUI(){
         //instantiate frame
         frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Totally Legit Webcrawler");
+        frame.setSize(700,400);
         frame.setLayout(null);
 
         //instantiates and position label
@@ -47,12 +49,16 @@ public class GUI {
             }
         });
 
+        //This is where the result of the crawl will print, hopefully
+        result = new JTextArea();
+        result.setBounds(152, 95, 500, 200);
+
         frame.add(label); frame.add(label2);
         frame.add(textField1); frame.add(textField2);
         frame.add(button);
+        frame.add(result);
 
 
-        frame.setSize(750,200);
         frame.setLayout(null);
         frame.setVisible(true);
 

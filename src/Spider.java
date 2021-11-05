@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -22,7 +24,10 @@ public class Spider {
 
     }
 
-    public void search(String url, String searchWord) {
+    public void search(@NotNull String url, String searchWord) {
+        if (!url.contains("https://") || !url.contains("http://")){
+            url.equals("https://" + url);
+        }
         while(this.pagesVisited.size() < MAX_PAGES_TO_SEARCH) {
             String currentUrl;
             SpiderLeg leg = new SpiderLeg();
@@ -41,11 +46,14 @@ public class Spider {
             if(success)
             {
                 System.out.println(String.format("**Success** Word %s found at %s", searchWord, currentUrl));
+                GUI.result.setText(GUI.result.getText() + String.format("**Success** Word %s found at %s", searchWord, currentUrl));
+                GUI.result.setText(GUI.result.getText() + "\n");
                 break;
             }
             this.pagesToVisit.addAll(leg.getLinks());
         }
         System.out.println(String.format("**Done** Visited %s web page(s)", this.pagesVisited.size()));
+        GUI.result.setText(GUI.result.getText() + String.format("**Done** Visited %s web page(s)", this.pagesVisited.size()));
     }
 
     /**

@@ -24,8 +24,6 @@ public class Main{
             while(gui.webUrl == null || gui.word == null) {
                 Thread.sleep(1000);
             }
-            System.out.println(gui.webUrl);
-            System.out.println(gui.word);
             Spider spider = new Spider();
             spider.search(gui.webUrl, gui.word);
         }
